@@ -2,7 +2,7 @@
 
 Can any continuous-time stochastic-volatility model reproduce the parabolic relationship  
 σ(z) = √(σ₀² + z²/2)  
-across 352 assets and all horizons 1-26 weeks with R² ≥ 0.92 and ≤ 2 free parameters?
+across 352 assets and all horizons 1-26 weeks with R² ≥ 0.99 and ≤ 2 free parameters?
 
 Here z = x/sqrt(T) where x is the log price change over a period T, adjusted for drift. Read the paper Q-Variance_Wilmott_July2025.pdf for more details.
 
