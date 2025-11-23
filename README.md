@@ -104,6 +104,7 @@ Orrell D (2026) The Quantum Stock Market. MIT Press (in press).
 
 **Additional plots:**
 
-<img src="Figure_2.png" width="350"> <img src="Figure_3.png" width="350">
+Left panel shows data for all stocks, and  T = 10, 20, 40 and 80 days. Right panel shows data for all T, and the 352 individual stocks.
 
-Left panel shows data for T = 10, 20, 40 and 80 days. Right panel shows data for individual stocks.
+<img src="Figure_2.png" width="400"> <img src="Figure_3.png" width="400">
+
