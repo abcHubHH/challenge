@@ -73,7 +73,7 @@ A: Not to our knowledge, and we have asked many experts, but please bring any re
 
 Q: Does q-variance have implications for quantitative finance?
 
-A: Yes, classical finance assumes a diffusive model for price change, but q-variance is a marker of price dynamics that are shaped by transactions. Standard formulas such as Black-Scholes or the formula used to calculate VIX will therefore not work as expected.
+A: Yes, classical finance assumes a diffusive model for price change, but q-variance is a marker of a different kind of price dynamics that is shaped by transactions. Standard formulas such as Black-Scholes or the formula used to calculate VIX will therefore not work as expected.
 
 Q: How does q-variance vary over different time periods, or from stock to stock?
 
@@ -101,7 +101,7 @@ A. Nothing, other than the fact that some problems which couple probability and 
 
 Q: Can I use AI for the challenge?
 
-A: Yes, AI-assisted entries are encouraged. We used Grok to help design and code the challenge. Its [entry](submissions/grok_rough_vol) is a modified rough volatility model which achieves an R² of 0.986 but requires four parameters to do it. The aim is to find a process which can achieve better results with fewer parameters.
+A: Yes, AI-assisted entries are encouraged. We used Grok to help design and code the challenge. Its [entry](submissions/grok_rough_vol) is a modified rough volatility model which achieves an R² of 0.986 but requires four parameters to do it, and is not time-invariant. The aim is to find a process which can achieve better results with fewer parameters.
 
 ## Further Reading
 
