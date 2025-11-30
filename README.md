@@ -10,7 +10,7 @@ $\sigma^2(z) = \sigma_0^2 + \frac{(z-z_0)^2}{2}$
 
 where $z = x/\sqrt{T}$, and $x$ is the log price change over a period $T$, adjusted for drift (in theory $z_0=0$ but it is included to account for small asymmetries). The figure above illustrates q-variance for stocks from the S&P 500, and periods $T$ of 1-26 weeks. Blue points are variance vs $z$ for individual periods, blue line is average variance as a function of $z$, red line is the q-variance curve. Read the [Q-Variance Wilmott paper](Q-Variance_Wilmott_July2025.pdf) for more details.
 
-To take part in the challenge, use your model to produce a long time series of simulated price data, and score it as described below.
+Q-variance is not an obscure phenomenon, it is a basic property of volatility, which affects everything from option pricing to how we measure volatility. To take part in the challenge, use your model to produce a long time series of simulated price data, and score it as described below.
 
 ## Repository Contents
 
@@ -56,10 +56,6 @@ To make your entry official:
 
 ## Frequently Asked Questions
 
-Q: Why should I enter this competition?
-
-A: For fun, an intellectual challenge, kudos. But also because, if your existing model of price behaviour doesn't do q-variance, then it is missing important market structure.
-
 Q: Is q-variance a well-known "stylized fact"?
 
 A: No, a stylized fact is a general observation about market data, but q-variance is a **falsifiable prediction** because the multiplicative constant on the quadratic term is not a fit, it is set by theory at 0.5. The same formula applies for all period lengths T. As far as we are aware this is the most clear-cut and easily tested example of a model prediction in finance.
@@ -87,6 +83,10 @@ A: Yes. It is not the same thing because q-variance applies to realized volatili
 Q: Is q-variance related to the price-change distribution over a period?
 
 A: Yes, it implies that price-change follows the q-distribution which is a particular time-invariant, Poisson-weighted sum of Gaussians (see further reading below). [Figure 4](Figure_4.png) compares the q-distribution with the average distribution over the S&P 500 stocks, where the distribution of each stock has been normalized by its standard deviation for comparability. The time-invariance is illustrated in [Figure 5](Figure_5.png) for different periods $T$. If your model matches q-variance and is time-invariant then it should produce the q-distribution.
+
+Q: Why should I enter this competition?
+
+A: For fun, an intellectual challenge, kudos. But also because, if your existing model of price behaviour doesn't do q-variance, then it is missing important market structure.
 
 Q: Can I use AI for the challenge?
 
