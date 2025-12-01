@@ -10,7 +10,7 @@ $\sigma^2(z) = \sigma_0^2 + \frac{(z-z_0)^2}{2}$
 
 where $z = x/\sqrt{T}$, and $x$ is the log price change over a period $T$, adjusted for drift (in theory $z_0=0$ but it is included to account for small asymmetries). The figure above illustrates q-variance for stocks from the S&P 500, and periods $T$ of 1-26 weeks. Blue points are variance vs $z$ for individual periods, blue line is average variance as a function of $z$, red line is the q-variance curve. Read the [Q-Variance Wilmott paper](Q-Variance_Wilmott_July2025.pdf) for more details.
 
-Q-variance is not an obscure phenomenon, it is a basic property of volatility, which affects everything from option pricing to how we measure volatility. To take part in the challenge, use your model to produce a long time series of simulated price data, and score it as described below.
+Q-variance is not an obscure phenomenon, it is a basic property of volatility, which affects everything from option pricing to how we measure and talk about volatility. To take part in the challenge, use your model to produce a long time series of simulated price data, and score it as described below.
 
 ## Repository Contents
 
@@ -41,7 +41,7 @@ To get started, first simulate a long price series using your model, then use `d
 
 Next, use `score_submission.py` to read your `dataset.parquet` (must match format: ticker, date, T, z, sigma). This will bin the values of $z$ in the range from -0.6 to 0.6, and compute the average variance per bin. It also computes the R² of your binned averages to the q-variance curve $\sigma^2(z) = \sigma_0^2 + (z-z_0)^2/2$.
 
-The threshold for the challenge is R² ≥ 0.995 with no more than three free parameters. The price-change distribution in $z$ should also be time-invariant, so the model should be independent of period length $T$.
+The threshold for the challenge is R² ≥ 0.995 with no more than three free parameters. The price-change distribution in $z$ should also be time-invariant, so the model should be independent of period length $T$. If your model doesn't tick all the boxes, please enter it anwyay because it may help rule out certain approaches or suggest ideas.
 
 To make your entry official:
 
@@ -62,7 +62,7 @@ A: No, a stylized fact is a general observation about market data, but q-varianc
 
 Q: Is q-variance a large effect?
 
-A: Yes, the minimum variance is about half the total variance so this is a large effect. If you are modelling variance then you probably need to take q-variance into account.
+A: Yes, the minimum variance is about half the total variance so this is a large effect. If you are modelling variance then you probably need to take q-variance into account. Otherwise it's like modelling the arc of a cannonball using a straight line plus noise (not recommended).
 
 Q: Has q-variance been previously reported in the literature?
 
@@ -94,12 +94,12 @@ A: Yes, AI-assisted entries are encouraged. We used Grok to help design and code
 
 ## Further Reading
 
+Wilmott P, Orrell D (2025) [Q-Variance: or, a Duet Concerning the Two Chief World Systems](Q-Variance_Wilmott_July2025.pdf). Wilmott 2025(138).
+ 
 Orrell D (2025) A Quantum Jump Model of Option Pricing. The Journal of Derivatives 33(2).
 
 Orrell D (2025) Quantum impact and the supply-demand curve. Philosophical Transactions of the Royal Society A 383(20240562).
 
 Orrell D (2026) The Quantum Stock Market. MIT Press (in press).
 
-Wilmott P, Orrell D (2025) [Q-Variance: or, a Duet Concerning the Two Chief World Systems](Q-Variance_Wilmott_July2025.pdf). Wilmott 2025(138).
- 
 Visit the [Qvar Shiny app](https://david-systemsforecasting.shinyapps.io/qvar/) to do more simulations.
