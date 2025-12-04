@@ -1,4 +1,4 @@
-# score_submission.py
+# score_submission.py - reads a parquet file and compares variance curve with baseline
 # comment out lines to read files in 3 parts or 1 part
 import pandas as pd
 import numpy as np
@@ -8,9 +8,9 @@ from sklearn.metrics import r2_score
 import matplotlib.pyplot as plt
 
 # load the parquet files from data_loader.py
-###df = pd.concat([pd.read_parquet("dataset_part1.parquet"),pd.read_parquet("dataset_part2.parquet"),pd.read_parquet("dataset_part3.parquet")])
+df = pd.concat([pd.read_parquet("dataset_part1.parquet"),pd.read_parquet("dataset_part2.parquet"),pd.read_parquet("dataset_part3.parquet")])
 
-df = pd.read_parquet("dataset.parquet")  # READ SUBMISSION DATA
+#df = pd.read_parquet("dataset.parquet")  # READ SUBMISSION DATA
 
 data = df.copy()
 data["var"] = data.sigma**2
@@ -34,7 +34,7 @@ def qvar(z, s0, zoff):    # define q-variance function, parameter is minimal vol
 
 # curve_fit returns a value popt and a covariance pcov, the _ means we ignore the pcov
 ###popt, _ = curve_fit(qvar, binned.z_mid, binned["var"], p0=[0.02, 0])  # fit this data
-popt = [0.255, 0.020]  # same as optimized fit to data
+popt = [0.2586, 0.0214]  # same as optimized fit to data
 
 fitted = qvar(binned.z_mid, popt[0], popt[1])  # cols are z_bin, which is a range like (-0.601, -0.55], and qvar
 r2 = 1 - np.sum((binned["var"] - fitted)**2) / np.sum((binned["var"] - binned["var"].mean())**2)
