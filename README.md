@@ -17,7 +17,7 @@ To take part in the challenge, use your model to produce a long time series of s
 ## Repository Contents
 
 The repository contains:
-- Parquet file in three parts containing price data 1950-2025 for 401 stocks from the S&P 500 (stocks with less than 25 percent of dates excluded)
+- Parquet file in three parts containing benchmark price data 1950-2025 for 401 stocks from the S&P 500 (stocks with less than 25 percent of dates excluded)
 - Full dataset generator `data_loader.py` to show how the data was generated
 - Baseline model fit `baseline/baseline_fit.py`
 - Figures showing q-variance and R² value for the actual data
@@ -25,11 +25,7 @@ The repository contains:
 - Scoring engine `code/score_submission.py` for your model
 - Jupyter notebook `notebooks/qvariance_single.ipynb` showing how to compute q-variance for a single asset
 
-The dataset used as a benchmark is for 401 stocks from the S&P 500, with periods T of 1–26 weeks.  
-
-Columns: ticker (str), date (date), T (int), sigma (float, annualized vol), z (float, scaled log return).
-
-Due to file size limitations, the dataset parquet file is divided into three parts. Combine them with the command:
+Dataset columns are ticker (str), date (date), T (int), sigma (float, annualized vol), z (float, scaled log return). Due to file size limitations, the parquet file is divided into three parts. Combine them with the command:
 ```python
 df = pd.concat([pd.read_parquet("dataset_part1.parquet"),pd.read_parquet("dataset_part2.parquet"),pd.read_parquet("dataset_part3.parquet")])
 ```
