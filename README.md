@@ -77,7 +77,7 @@ A: Yes, classical finance assumes a diffusive model for price change, but q-vari
 
 Q: How does q-variance vary over different time periods, or from stock to stock?
 
-A: In theory the curve should be time-invariant, though in practice there is a small degree of variation, see [Figure 2](Figure_2.png). The results for individual stocks are of course noisier and have a different minimum volatility as shown in [Figure 3](Figure_3.png), but taking the average variance over a number of stocks smooths out this noise. You can experiment further using the [Qvar Shiny app](https://david-systemsforecasting.shinyapps.io/qvar/).
+A: In theory the curve should be time-invariant, though in practice there is a small degree of variation with period length, see [Figure 2](Figure_2.png). The results for individual stocks are of course noisier and have a different minimum volatility as shown in [Figure 3](Figure_3.png), but taking the average variance over a number of stocks smooths out this noise. The curve is based on a first-order approximation to dynamics, and can hold less well for example when volatility is very low. You can experiment further using the [Qvar Shiny app](https://david-systemsforecasting.shinyapps.io/qvar/).
 
 Q: Is q-variance related to the implied volatility smile?
 
