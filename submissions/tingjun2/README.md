@@ -27,7 +27,7 @@ $$
 V_i = \omega + \lambda V_{i-1} + (1 - \lambda - 0.01) \cdot \left( \frac{S_{i-1} - S_{i-2}}{S_{i-2}} \right)^2
 $$
 
-*Where $\omega = \frac{\sigma^{2}}{252} \cdot (1 - \lambda)$*
+Where $\omega = \frac{\sigma^{2}}{252} \cdot (1 - \lambda)$
 
 - **Price Update:**
 
@@ -64,8 +64,8 @@ By treating each 2,500-day block as a unique ticker and de-meaning $z$-scores at
 
 
 <div style="display: flex;">
-  <img src="Figure_1_100k.png" width="400">
-  <img src="Figure_1_5M.png" width="400">
+  <img src="Figure_1_100k.png" width="500">
+  <img src="Figure_1_5M.png" width="500">
 </div>
 
 *Figures: Comparison of the q-variance fit for 100k days (left) and 5M days (right).*
