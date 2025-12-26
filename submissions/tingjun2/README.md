@@ -76,6 +76,6 @@ By plotting $R^2$ as a function of total simulated days, we identified a clear t
 Figure: $R^2$ score vs. Total Days. The 0.995 threshold is maintained after the 1M-day mark.
 
 ## Project Structure
-- `price_generator.ipynb`: Vectorized simulation and optimization logic.
-- `simulated_prices.csv`: 100k days of raw price data for verification.
+- [price_generator2.ipynb](price_generator2.ipynb): Vectorized simulation and optimization logic.
+- [simulated_prices.csv](simulated_prices.csv): 100k days of raw price data for verification.
 - `dataset_part1.parquet`, `dataset_part2.parquet`, `dataset_part3.parquet`: 5M days of analyzed window data.
