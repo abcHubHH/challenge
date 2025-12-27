@@ -40,7 +40,7 @@ Python dependencies: pip install yfinance pandas numpy scipy matplotlib pyarrow
 
 ## Scoring the Challenge
 
-The challenge scores submissions on **one global R²** over the **entire dataset**. Since the q-variance parabola with $\sigma_0=0.259$ and $z_0 = 0.021$ gives a near-perfect fit (R² = 0.999) this curve can be used as a proxy for the real data. In other words, the aim is to fit the two-parameter parabola, using **up to three parameters** – must be easy, right?
+The challenge scores submissions on one global R² over the entire dataset. Since the q-variance parabola with $\sigma_0=0.259$ and $z_0 = 0.021$ gives a near-perfect fit (R² = 0.999) this curve can be used as a proxy for the real data. In other words, the aim is to fit the two-parameter parabola, using **up to three parameters** – must be easy, right?
 
 To get started, a good first step is to replicate the q-variance curve using `baseline/baseline_fit.py` with the supplied `dataset.parquet` file. You can also check out `notebooks/qvariance_single.ipynb` which shows how q-variance is computed for a single asset, in this case the S&P 500.
 
@@ -65,7 +65,7 @@ To make your entry official:
 
 **Submission tips**
 - Check your model is robust to things like the number of simulation steps or sample lengths, otherwise these are counted as parameters. The model data should converge to the parabola, not just match it for a particular choice of simulation time.
-- Something counts as a parameter if it is adjusted to fit the desired result, or if changing it within reasonable bounds affects the result. Please declare **all such parameters**, don't have a number like 0.01 somewhere in your code which affects the results but is not declared as a parameter.
+- Something counts as a parameter if it is adjusted to fit the desired result, or if changing it within reasonable bounds affects the result. Please declare **all such parameters**, don't have an ad hoc number or adjustment somewhere in your code which affects the results but is not declared as a parameter.
 - Parameters need to include a drift or offset, because the aim is to fit the specific parabola in Figure 1 which has a small offset.
 - Standard techniques like stochastic volatility, rough volatility, or GARCH typically involve a minimum of four parameters when we include the drift (and these methods don't replicate q-variance anyway). That means you need to do something different.
 - The model should be T-invariant, so changing the period T should not give a very different result, either in terms of the q-variance plot or the distribution.
