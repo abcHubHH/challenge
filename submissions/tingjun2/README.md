@@ -8,7 +8,7 @@ This implementation maps the discrete-time GARCH process to the theoretical **Q-
 $$V(z) = \sigma_0^2 + \frac{(z - z_{off})^2}{2}$$
 
 ## Parameters & Mapping Logic
-The model utilizes six parameters to control GARCH dynamics and ensure numerical stability during high-intensity simulations:
+The model utilizes six parameters to control GARCH dynamics and ensure numerical stability during high-intensity simulations. **Only the primary parameters (Target Vol, Annual Return, and Persistence) are optimized to maximize $R^2$; the Shock Weight ($\alpha$) is automatically derived from persistence, while the safety buffers remain fixed at their default values.**
 
 | Parameter | Value | Influence on Q-Variance Geometry / Stability |
 | :--- | :--- | :--- |
