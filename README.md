@@ -105,7 +105,7 @@ A: In theory the curve should be time-invariant, though in practice there is a s
 
 Q: Is q-variance related to the price-change distribution over a period?
 
-A: Yes, it implies that price-change follows the q-distribution which is a particular time-invariant, Poisson-weighted sum of Gaussians (see further reading below). [Figure 4](Figure_4.png) compares the q-distribution with the average distribution over the S&P 500 stocks. The time-invariance is illustrated in [Figure 5](Figure_5.png) for different periods $T$. If your model matches q-variance and is time-invariant then it should produce the q-distribution.
+A: Yes, price-change in the quantum model follows the q-distribution which is a particular time-invariant, Poisson-weighted sum of Gaussians (see further reading below). [Figure 4](Figure_4.png) compares the q-distribution with the average distribution over the S&P 500 stocks. The time-invariance is illustrated in [Figure 5](Figure_5.png) for different periods $T$.
 
 Q: How long a time series do we need?
 
